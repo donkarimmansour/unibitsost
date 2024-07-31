@@ -1,12 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc",
-  "root": true,
   "extends": [
-    "next/core-web-vitals",
+    // "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["tailwindcss"],
+  "plugins": ["tailwindcss", "@typescript-eslint", "prettier"],
+ 
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
@@ -14,6 +16,9 @@
     "tailwindcss/classnames-order": "error"
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "tailwindcss": {
       "callees": ["cn"],
       "config": "tailwind.config.js"

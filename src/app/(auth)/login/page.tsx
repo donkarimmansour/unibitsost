@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <div
+      className="container flex h-screen 
+    
+    w-screen flex-col items-center justify-center"
+    >
       <Link
         href="/"
         className={cn(
@@ -42,7 +46,7 @@ export default function LoginPage() {
             href="/register"
             className="hover:text-brand underline underline-offset-4"
           >
-            Don&apos;t have an account? Sign Up 
+            Don't have an account? Sign Up
           </Link>
         </p>
       </div>

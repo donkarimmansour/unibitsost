@@ -1,0 +1,10 @@
+{
+    "**/*.(ts|tsx)": "npm run typecheck",
+  
+    "**/*.{js,ts,jsx,tsx}": [
+      "npm run lint:no_cache",
+      "npm run format:fix"
+    ],
+  
+    "**/*.json": "npm run format:fix"
+  }
