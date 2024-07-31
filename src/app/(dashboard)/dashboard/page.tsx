@@ -10,7 +10,7 @@ import { DashboardShell } from "@/components/shell"
 
 export const metadata = {
   title: "Dashboard",
-} 
+}
 
 const ProductList = async () => {
   const response = await fetch("https://fakestoreapi.com/products?limit=12")

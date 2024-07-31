@@ -29,14 +29,13 @@ type ResultTypes = {
 export function UserSignUpForm({ className, ...props }: UserSignUpFormProps) {
   const {
     register,
-    handleSubmit, 
+    handleSubmit,
     formState: { errors },
   } = useForm<FormTypes>({
     resolver: zodResolver(userSignUpSchema),
-    mode: "onBlur"
+    mode: "onBlur",
   })
 
-  
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
   const [isGoogleLoading, setIsGoogleLoading] = React.useState<boolean>(false)
 
@@ -44,10 +43,10 @@ export function UserSignUpForm({ className, ...props }: UserSignUpFormProps) {
   const onSubmit: SubmitHandler<FormTypes> = async (formData) => {
     setIsLoading(true)
 
-    const signUpResult: ResultTypes = await signUp(formData)  
+    const signUpResult: ResultTypes = await signUp(formData)
 
     setIsLoading(false)
-  
+
     if (!signUpResult.ok) {
       return toast({
         title: "Something went wrong.",

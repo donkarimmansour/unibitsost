@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth/next"
 import { z } from "zod"
+
 import { authOptions } from "@/lib/auth"
 import db from "@/lib/db"
 import { userNameSchema, userRouteSchema } from "@/lib/validations/user"
@@ -10,7 +11,6 @@ export async function PUT(
 ) {
   try {
     const { params } = userRouteSchema.parse(context)
-
 
     // Ensure user is authentication and has access to this user.
     const session = await getServerSession(authOptions)

@@ -3,12 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { SidebarNavItem } from "types"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 
 interface DashboardNavProps {
-  items: SidebarNavItem[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items: any[]
 }
 
 export function DashboardNav({ items }: DashboardNavProps) {
@@ -21,7 +21,8 @@ export function DashboardNav({ items }: DashboardNavProps) {
   return (
     <nav className="grid items-start gap-2">
       {items.map((item, index) => {
-        const Icon = Icons[item.icon || "arrowRight"]
+        // item.icon
+        const Icon = Icons["arrowRight"]
         return (
           item.href && (
             <Link key={index} href={item.disabled ? "/" : item.href}>

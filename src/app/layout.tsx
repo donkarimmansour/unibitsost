@@ -2,14 +2,14 @@ import type { Metadata, Viewport } from "next"
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
-import "@/styles/globals.css"  
- 
+import "@/styles/globals.css"
+
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
+import { AuthProvider } from "@/components/auth-provider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { AuthProvider } from "@/components/auth-provider"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -17,7 +17,7 @@ const fontSans = FontSans({
 })
 
 // Font files can be colocated inside of `pages`
-const fontHeading = localFont({ 
+const fontHeading = localFont({
   src: "../styles/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 })

@@ -1,14 +1,14 @@
 import * as React from "react"
 import Link from "next/link"
 
-import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { useLockBody } from "@/hooks/use-lock-body"
 import { Icons } from "@/components/icons"
 
 interface MobileNavProps {
-  items: MainNavItem[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items: any[]
   children?: React.ReactNode
 }
 

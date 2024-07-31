@@ -1,7 +1,18 @@
 "use client"
 
 import Link from "next/link"
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, Scatter, ScatterChart, XAxis } from "recharts"
+import {
+  Area,
+  AreaChart,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Line,
+  LineChart,
+  Scatter,
+  ScatterChart,
+  XAxis,
+} from "recharts"
 
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -33,7 +44,6 @@ export function Analytics({ chartConfig, chartData }: any) {
     </ChartContainer>
   )
 }
-
 
 export const AnalyticsLine = ({ chartConfig, chartData }: any) => {
   return (
@@ -97,7 +107,6 @@ export const AnalyticsScatter = ({ chartConfig, chartData }: any) => {
     </ChartContainer>
   )
 }
-
 
 Analytics.Skeleton = () => {
   return (

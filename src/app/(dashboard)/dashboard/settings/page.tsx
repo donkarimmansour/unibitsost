@@ -17,7 +17,6 @@ export default async function SettingsPage() {
   if (!user) {
     redirect(authOptions?.pages?.signIn || "/login")
   }
-  
 
   return (
     <DashboardShell>

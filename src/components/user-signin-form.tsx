@@ -37,11 +37,10 @@ export function UserSignInForm({ className, ...props }: UserSignInFormProps) {
     setIsLoading(true)
 
     const signInResult = await signIn("credentials", {
-        email: formData.email.toLowerCase(),
-        password: formData.password,
-        redirect: false,
-      })
- 
+      email: formData.email.toLowerCase(),
+      password: formData.password,
+      redirect: false,
+    })
 
     setIsLoading(false)
 
@@ -54,7 +53,7 @@ export function UserSignInForm({ className, ...props }: UserSignInFormProps) {
       })
     }
 
-     router.push("/dashboard")
+    router.push("/dashboard")
   }
 
   return (
@@ -124,7 +123,7 @@ export function UserSignInForm({ className, ...props }: UserSignInFormProps) {
         onClick={() => {
           setIsGoogleLoading(true)
           signIn("google", {
-            callbackUrl: "/dashboard"
+            callbackUrl: "/dashboard",
           })
         }}
         disabled={isLoading || isGoogleLoading}

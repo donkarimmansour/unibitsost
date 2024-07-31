@@ -77,18 +77,18 @@ export const authOptions: NextAuthOptions = {
         },
       },
       profile(profile, tokens) {
-          return {
-                id: profile.sub,
-                name: profile.name,
-                email: profile.email,
-                // emailVerified: profile.emailVerified,
-                image: profile.image,
-                // createdAt: profile.createdAt,
-                // updatedAt: profile.updatedAt,
-                // accounts: profile.accounts,
-                // sessions: profile.sessions,
-                // weathers: profile.weathers
-          }
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          // emailVerified: profile.emailVerified,
+          image: profile.image,
+          // createdAt: profile.createdAt,
+          // updatedAt: profile.updatedAt,
+          // accounts: profile.accounts,
+          // sessions: profile.sessions,
+          // weathers: profile.weathers
+        }
       },
     }),
     CredentialsProvider({
@@ -96,13 +96,12 @@ export const authOptions: NextAuthOptions = {
         email: { label: "email", type: "email" },
         password: { label: "password", type: "password" },
       },
-      
-      async authorize(credentials: any) {
 
+      async authorize(credentials: any) {
         if (!credentials) {
-          throw new Error("Please enter an email and password");
+          throw new Error("Please enter an email and password")
         }
-        
+
         // check to see if email and password is there
         const check = userSignInSchema.safeParse(credentials)
 
@@ -138,14 +137,12 @@ export const authOptions: NextAuthOptions = {
         // }
       },
     }),
-
-  
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       if (account?.provider == "credentials") {
         return true
-      }else if (account?.provider == "google") {
+      } else if (account?.provider == "google") {
         return true
       }
 
@@ -154,18 +151,17 @@ export const authOptions: NextAuthOptions = {
     async session({ token, session }) {
       // console.log("get session");
 
-        if (token) {
-          session.user.id = token.sub!
-          session.user.name = token.name
-          session.user.email = token.email
-          session.user.image = token.picture
-        }
- 
-       return session
+      if (token) {
+        session.user.id = token.sub!
+        session.user.name = token.name
+        session.user.email = token.email
+        session.user.image = token.picture
+      }
+
+      return session
     },
     async jwt({ token, user, account, profile, isNewUser, trigger, session }) {
-
-      if(trigger === 'update') {
+      if (trigger === "update") {
         token.name = session.name
       }
 

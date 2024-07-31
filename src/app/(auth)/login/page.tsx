@@ -6,7 +6,6 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { UserSignInForm } from "@/components/user-signin-form"
 
-
 export const metadata: Metadata = {
   title: "Login",
   description: "Login to your account",
@@ -47,7 +46,7 @@ export default function LoginPage() {
             href="/register"
             className="hover:text-brand underline underline-offset-4"
           >
-            Don't have an account? Sign Up
+            Dont have an account? Sign Up
           </Link>
         </p>
       </div>

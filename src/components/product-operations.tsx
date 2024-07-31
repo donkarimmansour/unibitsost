@@ -25,9 +25,12 @@ import { toast } from "@/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 
 async function deleteProduct(productId: string) {
-  const response = await fetch(`https://fakestoreapi.com/products//${productId}`, {
-    method: "DELETE",
-  })
+  const response = await fetch(
+    `https://fakestoreapi.com/products//${productId}`,
+    {
+      method: "DELETE",
+    }
+  )
 
   if (!response?.ok) {
     toast({

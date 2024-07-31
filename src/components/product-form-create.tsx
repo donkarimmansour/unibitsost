@@ -23,7 +23,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue, 
+  SelectValue,
 } from "./ui/select"
 
 interface UserSignUpFormProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -36,7 +36,7 @@ export function ProductFormCreate({ className, ...props }: any) {
     handleSubmit,
     formState: { errors },
     control,
-    getValues
+    getValues,
   } = useForm<FormData>({
     resolver: zodResolver(productCreateSchema),
     mode: "onBlur",
@@ -108,9 +108,7 @@ export function ProductFormCreate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="title">
-              title
-            </Label>
+            <Label htmlFor="title">title</Label>
             <Input
               id="title"
               placeholder="test ..."
@@ -129,9 +127,7 @@ export function ProductFormCreate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="price">
-              price
-            </Label>
+            <Label htmlFor="price">price</Label>
             <Input
               id="price"
               placeholder="99"
@@ -147,10 +143,7 @@ export function ProductFormCreate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="category">
-              category
-            </Label>
-
+            <Label htmlFor="category">category</Label>
 
             <Input
               id="category"
@@ -185,9 +178,7 @@ export function ProductFormCreate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="image">
-              image
-            </Label>
+            <Label htmlFor="image">image</Label>
             <Input
               id="image"
               accept="image/*"

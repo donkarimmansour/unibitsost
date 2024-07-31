@@ -91,7 +91,6 @@ export default async function StatisticsPage() {
           </div>
         </div>
       </div>
-
     </div>
   )
 }

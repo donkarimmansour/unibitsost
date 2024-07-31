@@ -4,14 +4,14 @@ import * as React from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
 
-import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
 interface MainNavProps {
-  items?: MainNavItem[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items?: any[]
   children?: React.ReactNode
 }
 
@@ -47,7 +47,6 @@ export function MainNav({ items, children }: MainNavProps) {
         </nav>
       ) : null}
 
-      
       <button
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}

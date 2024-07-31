@@ -1,12 +1,10 @@
-import { type ClassValue, clsx } from "clsx"
 import { env } from "process"
+import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-
-
 
 export function formatDate(input: string | number): string {
   const date = new Date(input)
@@ -16,8 +14,6 @@ export function formatDate(input: string | number): string {
     year: "numeric",
   })
 }
-
-
 
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`

@@ -4,6 +4,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
+import { useSession } from "next-auth/react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
@@ -22,7 +23,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { toast } from "@/components/ui/use-toast"
 import { Icons } from "@/components/icons"
-import { useSession } from "next-auth/react"
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
   user: Pick<User, "id" | "name">
@@ -44,7 +44,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
   })
   const [isSaving, setIsSaving] = React.useState<boolean>(false)
   const { update } = useSession()
-  
+
   async function onSubmit(data: FormData) {
     setIsSaving(true)
 
@@ -67,11 +67,9 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
         variant: "destructive",
       })
     }
-    
-    
+
     //update name in session
     update({ name: data.name })
-
 
     toast({
       description: "Your name has been updated.",
@@ -99,7 +97,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
             <Label className="sr-only" htmlFor="name">
               Name
             </Label>
-            <Input 
+            <Input
               id="name"
               className="w-[400px]"
               size={32}

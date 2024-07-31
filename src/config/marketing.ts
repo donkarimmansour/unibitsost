@@ -1,6 +1,4 @@
-import { MarketingConfig } from "types"
-
-export const marketingConfig: MarketingConfig = {
+export const marketingConfig = {
   mainNav: [
     {
       title: "About",

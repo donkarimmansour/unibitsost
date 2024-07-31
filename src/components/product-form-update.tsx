@@ -111,9 +111,7 @@ export function ProductFormUpdate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="title">
-              title
-            </Label>
+            <Label htmlFor="title">title</Label>
             <Input
               id="title"
               placeholder="name@example.com"
@@ -133,9 +131,7 @@ export function ProductFormUpdate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="price">
-              price
-            </Label>
+            <Label htmlFor="price">price</Label>
             <Input
               id="price"
               placeholder="name@example.com"
@@ -152,9 +148,7 @@ export function ProductFormUpdate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="category">
-              category
-            </Label>
+            <Label htmlFor="category">category</Label>
 
             <Input
               id="category"
@@ -196,9 +190,7 @@ export function ProductFormUpdate({ className, ...props }: any) {
           </div>
 
           <div className="grid gap-1">
-            <Label htmlFor="image">
-              image
-            </Label>
+            <Label htmlFor="image">image</Label>
             <Input
               id="image"
               type="file"

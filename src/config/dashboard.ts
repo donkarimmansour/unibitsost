@@ -1,6 +1,4 @@
-import { DashboardConfig } from "types"
-
-export const dashboardConfig: DashboardConfig = {
+export const dashboardConfig = {
   mainNav: [
     {
       title: "Product",
@@ -9,7 +7,7 @@ export const dashboardConfig: DashboardConfig = {
     {
       title: "Statistics",
       href: "/statistics",
-    }
+    },
   ],
   sidebarNav: [
     {
@@ -24,4 +22,3 @@ export const dashboardConfig: DashboardConfig = {
     },
   ],
 }
- 
