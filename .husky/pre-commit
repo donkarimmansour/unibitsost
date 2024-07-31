@@ -1,5 +1,10 @@
-{
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-}
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#this command ensures that there are no typescript errors with tsc.
+# running eslint to ensure no linting error
+# and formatting our code with prettier by runnint prettier --write
+
+# npm run typecheck && npm run lint:fix && npm run format:write
+
+npm run lint:staged
