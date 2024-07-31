@@ -10,6 +10,7 @@
     "lint:no_cache": "next lint --no-cache",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
+    "lint:staged": "lint-staged",
     "typecheck": "tsc --noEmit",
     "format:fix": "prettier 'src/**/*.{js,ts,jsx,tsx,mjs,cjs,json}' --write",
     "format:check": "prettier 'src/**/*.{js,ts,jsx,tsx,mjs,cjs,json}' --check"
